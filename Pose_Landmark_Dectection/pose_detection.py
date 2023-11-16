@@ -33,7 +33,6 @@ while True:
     current_time = time.time()
     fps = 1/(current_time-prev_time)
     prev_time = current_time
-
     _, BGR = cam.read()
     BGR_time = BGR.copy()
     cv2.putText(BGR_time, "FPS: "+str(round(fps,1)), (10,50), cv2.FONT_HERSHEY_PLAIN, 2, (0,0,255),2)
